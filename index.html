@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 프로그램</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery 추가 -->
+</head>
+<body>
+    <!-- 퀴즈 시작 버튼 -->
+    <div id="start-screen" class="center">
+        <button id="start-button">시작하기</button>
+    </div>
+
+    <!-- 퀴즈 화면 -->
+    <div id="quiz-screen" class="center">
+        <div id="timer-container">
+            <span id="timer">30</span> 초
+        </div>
+        <div id="question-container">
+            <div id="question-number"></div>
+            <div id="question-text"></div>
+        </div>
+        <ul id="choices-list"></ul>
+        <button id="next-button" class="button" style="display:none;" onclick="nextQuestion()">다음 문제</button>
+    </div>
+
+    <!-- 퀴즈 종료 화면 -->
+    <div id="end-screen" class="center" style="display:none;">
+        <h2>퀴즈 종료!</h2>
+        <div id="final-score"></div>
+        <button class="button" onclick="restartQuiz()">다시 시작</button>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
